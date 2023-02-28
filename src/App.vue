@@ -20,11 +20,11 @@
             v-for="(consumer, fileName) in source.sourceMapRecord"
             :key="fileName"
           >
-            {{ fileName }}
+            {{ fileName }}.map
           </div>
         </div>
         <div class="upload-container">
-          <input v-model="sourceFileUrl" class="url-input" />
+          <input v-model="sourceFileUrl" class="url-input" placeholder="请输入SourceMap链接"/>
           <div class="upload-btn" @click="loadSourceFromUrl">从链接导入</div>
           <div class="upload-btn">
             从文件导入
