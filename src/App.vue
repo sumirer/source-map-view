@@ -24,7 +24,11 @@
           </div>
         </div>
         <div class="upload-container">
-          <input v-model="sourceFileUrl" class="url-input" placeholder="请输入SourceMap链接"/>
+          <input
+            v-model="sourceFileUrl"
+            class="url-input"
+            placeholder="请输入SourceMap链接"
+          />
           <div class="upload-btn" @click="loadSourceFromUrl">从链接导入</div>
           <div class="upload-btn">
             从文件导入
@@ -324,6 +328,7 @@ pre {
   background: #e6eef4;
   box-shadow: 15px 15px 30px #cfd6dc, -15px -15px 30px #fdffff;
   padding: 14px;
+  box-sizing: border-box;
 }
 
 .op-container:first-child {
@@ -450,5 +455,30 @@ button:active {
 
 .message-box.show {
   top: 40px;
+}
+
+@media screen and (max-width: 400px) {
+  .op-container {
+    min-width: unset !important;
+    flex: none;
+  }
+
+  .op-container:first-child {
+    margin-right: 0;
+  }
+
+  .upload-container {
+    flex-wrap: wrap;
+  }
+
+  .upload-btn {
+    margin-top: 14px;
+    margin-left: 0;
+    margin-right: 18px;
+  }
+  button {
+    padding: 0.4em 0.6em;
+    margin-right: 16px;
+  }
 }
 </style>
