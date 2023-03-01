@@ -370,6 +370,7 @@ button:active {
   box-shadow: 15px 15px 12px #cfd6dc, -15px -15px 12px #fdffff;
   padding: 14px;
   margin-top: 20px;
+  word-break: break-all;
 }
 
 .reason {
